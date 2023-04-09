@@ -35,12 +35,12 @@ def load_input(sample_rate: int):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_path", "-m", default="base", help="File path or abbreviation of a Whisper model", choices=["tiny", "base", "small", "medium", "large"])
+    parser.add_argument("--model", default="base", help="File path or abbreviation of a Whisper model")
     parser.add_argument("--use_en", action="store_true", help="Enable English model")
     parser.add_argument("--energy_threshold", default=1000, help="Energy level for mic to detect.", type=int)   # Audio energy level
     parser.add_argument("--sample_rate", default=16000, help="Audio sample rate.", type=int)    # Audio sample rate
-    parser.add_argument("--transcript_delay", "-d", default=2, help="When and during input, define (n) seconds of buffer delay in transcription.", type=float)
-    parser.add_argument("--phrase_timeout", "-t", default=3, help="When no input detected, define (n) seconds to indicate the next input as next line.", type=float)  
+    parser.add_argument("--transcript_delay", default=2, help="When and during input, define (n) seconds of buffer delay in transcription.", type=float)
+    parser.add_argument("--phrase_timeout", default=3, help="When no input detected, define (n) seconds to indicate the next input as next line.", type=float)  
     args = parser.parse_args()
 
     # The last time a recording was retreived from the queue, default None as initialization
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     source = load_input(args.sample_rate)
 
     # Initialize Whisper transcription model
-    model = load_model(args.model_path)
+    model = load_model(args.model)
 
     # Reduce ambient noise
     with source: recorder.adjust_for_ambient_noise(source)
