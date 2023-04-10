@@ -1,4 +1,4 @@
-# whisper-ing
+# whisper_ing
 
 ### To enable seemingly __real time__ process of audio transcription using WhisperAI.
 ```bash
@@ -7,7 +7,7 @@
 * ffmpeg installed
 
 # Inital Step
-git clone https://github.com/saioru/chatty_whisper.git
+git clone https://github.com/saioru/whisper_ing.git
 
 # Install requirements
 pip install -r requirements.txt
