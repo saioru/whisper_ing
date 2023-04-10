@@ -6,7 +6,7 @@
 * python 3.8 and above
 * ffmpeg installed
 
-# Inital Step
+# Clone the repository
 git clone https://github.com/saioru/whisper_ing.git
 
 # Install requirements
