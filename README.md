@@ -1,4 +1,4 @@
-# chatty_whisper
+# whisper-ing
 
 ### To enable seemingly __real time__ process of audio transcription using WhisperAI.
 ```bash
