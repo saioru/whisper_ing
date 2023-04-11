@@ -1,6 +1,9 @@
 # whisper_ing
 
 ### To enable seemingly __real time__ process of audio transcription using WhisperAI.
+
+![Demo gif](demo.gif)
+
 ```bash
 # Environment variables (Preferably to be executed in venv)
 * python 3.8 and above
